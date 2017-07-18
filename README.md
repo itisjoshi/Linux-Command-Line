@@ -2,12 +2,7 @@
 
 Must know Commands
 
-```javascript
-cat used to type out a file (or combine files)
-head used to show the first few lines of a file
-tail used to show the last few lines of a file
-man used to view documentation.
-```
+## File operations
 
 ```javascript
 cat	Used for viewing files that are not very long; it does not provide any scroll-back.
@@ -23,11 +18,12 @@ rm	Remove a file
 rm –f	Forcefully remove a file
 rm –i	Interactively remove a file
 ```
-sudo shutdown -h 10:00 "Shutting down for scheduled maintenance."
 
-sudo shutdown -r 10:00 "Reboot for scheduled maintenance."
+> sudo shutdown -h 10:00 "Shutting down for scheduled maintenance."
 
-which diff
+> sudo shutdown -r 10:00 "Reboot for scheduled maintenance."
+
+> which diff
 
 pwd	Displays the present working directory
 cd ~ or cd	Change to your home directory (short-cut name is ~ (tilde))
