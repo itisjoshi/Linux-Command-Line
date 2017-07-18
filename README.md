@@ -73,37 +73,41 @@ rm -rf	Forcefully remove a directory recursively
 
 > which diff
 
-I/O Redirection
+## I/O Redirection
 
 Through the command shell we can redirect the three standard file streams so that we can get input from either a file or another command instead of from our keyboard, and we can write output and errors to files or send them as input for subsequent commands.
 
 For example, if we have a program called do_something that reads from stdin and writes to stdout and stderr, we can change its input source by using the less-than sign ( < ) followed by the name of the file to be consumed for input data:
 
-$ do_something < input-file
+> do_something < input-file
 
 If you want to send the output to a file, use the greater-than sign (>) as in:
 
-$ do_something > output-file
+> do_something > output-file
 
 Because stderr is not the same as stdout, error messages will still be seen on the terminal windows in the above example.
 
 If you want to redirect stderr to a separate file, you use stderr’s file descriptor number (2), the greater-than sign (>), followed by the name of the file you want to hold everything the running command writes to stderr:
 
-$ do_something 2> error-file
+> do_something 2> error-file
 
 A special shorthand notation can be used to put anything written to file descriptor 2 (stderr) in the same place as file descriptor 1 (stdout): 2>&1
 
-$ do_something > all-output-file 2>&1
+> do_something > all-output-file 2>&1
 
 bash permits an easier syntax for the above:
 
-$ do_something >& all-output-file
+> do_something >& all-output-file
 
-$ locate zip | grep bin
+## Search
 
+> locate zip | grep bin
+
+
+```javascript
 sudo updatedb
 locate test1.txt
-
+```
 
 ? 	Matches any single character
 *	Matches any string of characters
@@ -112,58 +116,64 @@ locate test1.txt
 
 Searching for files and directories named "gcc":
 
-$ find /usr -name gcc
+> find /usr -name gcc
 
 Searching only for directories named "gcc":
 
-$ find /usr -type d -name gcc
+> find /usr -type d -name gcc
 
 Searching only for regular files named "gcc":
 
-$ find /usr -type f -name gcc
+> find /usr -type f -name gcc
 
 To find and remove all files that end with .swp:
 
-$ find -name "*.swp" -exec rm {} ’;’
+> find -name "*.swp" -exec rm {} ’;’
 
 One can also use the -ok option, which behaves the same as -exec, except that find will prompt you for permission before executing the command. 
 
-$ find / -ctime 3
+> find / -ctime 3
 
 Here, -ctime is when the inode metadata (i.e., file ownership, permissions, etc.) last changed; it is often, but not necessarily, when the file was first created. You can also search for accessed/last read (-atime) or modified/last written (-mtime) times. The number is the number of days and can be expressed as either a number (n) that means exactly that value, +n, which means greater than that number, or -n, which means less than that number. There are similar options for times in minutes (as in -cmin, -amin, and -mmin).
 
 To find files based on sizes:
 
-$ find / -size 0
+> find / -size 0
 
 Note the size here is in 512-byte blocks, by default; you can also specify bytes (c), kilobytes (k), megabytes (M), gigabytes (G), etc. As with the time numbers above, file sizes can also be exact numbers (n), +n or -n. For details, consult the man page for find.
 
 For example, to find files greater than 10 MB in size and running a command on those files:
 
-$ find / -size +10M -exec command {} ’;’
+> find / -size +10M -exec command {} ’;’
 
+
+```javascript
  apt-get install
  apt-cache 
  dpkg --install foo.deb
  apt-get upgrade
- 
+```
+
+```javascript
  man -f
  man -k
- 
  man --help
+```
+> kill -SIGKILL <pid> or kill -9 <pid>
  
- kill -SIGKILL <pid> or kill -9 <pid>
- 
- info <topic name>
- 
+> info <topic name>
+
+```javascript
   w
   top
   uptime
+```
+
+> jobs -l
   
-  jobs -l
-  
-  add & to run process in background
+ add & to run process in background
  
+ ```javascript
  ps -ef
  ps -eLf
  
@@ -172,16 +182,19 @@ $ find / -size +10M -exec command {} ’;’
  
  /etc/crontab 
  crontab -e
+ ```
  
- sleep
- 
- $ tar xvf mydir.tar	Extract all the files in mydir.tar into the mydir directory
-$ tar zcvf mydir.tar.gz mydir	Create the archive and compress with gzip
-$ tar jcvf mydir.tar.bz2 mydir	Create the archive and compress with bz2
-$ tar Jcvf mydir.tar.xz mydir	Create the archive and compress with xz
-$ tar xvf mydir.tar.gz	Extract all the files in mydir.tar.gz into the mydir directory. Note you do not have to tell tar it is in gzip format.
+> sleep
 
+```javascript
+tar xvf mydir.tar	Extract all the files in mydir.tar into the mydir directory
+tar zcvf mydir.tar.gz mydir	Create the archive and compress with gzip
+tar jcvf mydir.tar.bz2 mydir	Create the archive and compress with bz2
+tar Jcvf mydir.tar.xz mydir	Create the archive and compress with xz
+tar xvf mydir.tar.gz	Extract all the files in mydir.tar.gz into the mydir directory. Note you do not have to tell tar it is in gzip format.
+```
 
+```javascript
 echo line one > myfile
 
 cat << EOF > myfile
@@ -189,6 +202,7 @@ cat << EOF > myfile
 > line two
 > line three
 > EOF
+```
 
 ## nano
 
@@ -196,11 +210,13 @@ nano  is easy to use, and requires very little effort to learn. To open a file i
 
 nano provides a two line “shortcut bar” at the bottom of the screen that lists the available commands. Some of these commands are:
 
+```javascript
 CTRL-G: Display the help screen
 CTRL-O: Write to a file
 CTRL-X: Exit a file
 CTRL-R: Insert contents from another file to the current buffer
 CTRL-C: Cancels previous commands.
+```
 
 ## Modes in vi
 
@@ -219,6 +235,7 @@ Type : to switch to the Line mode from Command mode. Each key is an external com
 Uses line editing commands inherited from older line editors. Most of these commands are actually no longer used. Some line editing commands are very powerful.
 Press Esc to exit Line mode and return to Command mode.
 
+```javascript
 vi myfile	Start the vi editor and edit the myfile file
 vi -r myfile	Start vi and edit myfile in recovery mode from a system crash
 :r file2	Read in file2 and insert at current position
@@ -228,7 +245,9 @@ vi -r myfile	Start vi and edit myfile in recovery mode from a system crash
 :x or :wq	Exit vi and write out modified file
 :q	Quit vi
 :q!	Quit vi even though modifications have not been saved
+```
 
+```javascript
 arrow keys	To move up, down, left and right
 j or <ret>	To move one line down
 k	To move one line up
@@ -243,14 +262,19 @@ w	To move to beginning of next word
 CTRL-F or Page Down	To move forward one page
 CTRL-B or Page Up	To move backward one page
 ^l	To refresh and center screen
+```
 
+```javascript
 /pattern	Search forward for pattern
 ?pattern	Search backward for pattern
+```
 
+```javascript
 n	Move to next occurrence of search pattern
 N	Move to previous occurrence of search pattern
+```
 
-
+```javascript
 a	Append text after cursor; stop upon Escape key
 A	Append text at end of current line; stop upon Escape key
 i	Insert text before cursor; stop upon Escape key
@@ -269,13 +293,15 @@ u	Undo the previous operation
 yy	Yank (copy) the current line and put it in buffer
 Nyy or yNy	Yank (copy) N lines and put it in buffer
 p	Paste at the current position the yanked line or lines from the buffer.
+```
 
-
+```javascript
 chown	Used to change user ownership of a file or directory
 chgrp	Used to change group ownership
 chmod	Used to change the permissions on the file, which can be done separately for owner, group and the rest of the world (often named as other.)
+```
 
-
+```javascript
 ethtool	Queries network interfaces and can also set various parameters such as the speed.
 netstat	Displays all active connections and routing tables. Useful for monitoring performance and troubleshooting.
 nmap	Scans open ports on a network. Important for security analysis
@@ -283,6 +309,6 @@ tcpdump	Dumps network traffic for analysis.
 iptraf	Monitors network traffic in text mode.
 mtr	Combines functionality of ping and traceroute and gives a continuously updated display.
 dig	Tests DNS workings. A good replacement for host and nslookup.
+```
 
-
-scp <localfile> <user@remotesystem>:/home/user/
+> scp <localfile> <user@remotesystem>:/home/user/
