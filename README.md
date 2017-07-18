@@ -261,3 +261,18 @@ Nyy or yNy	Yank (copy) N lines and put it in buffer
 p	Paste at the current position the yanked line or lines from the buffer.
 
 
+chown	Used to change user ownership of a file or directory
+chgrp	Used to change group ownership
+chmod	Used to change the permissions on the file, which can be done separately for owner, group and the rest of the world (often named as other.)
+
+
+ethtool	Queries network interfaces and can also set various parameters such as the speed.
+netstat	Displays all active connections and routing tables. Useful for monitoring performance and troubleshooting.
+nmap	Scans open ports on a network. Important for security analysis
+tcpdump	Dumps network traffic for analysis.
+iptraf	Monitors network traffic in text mode.
+mtr	Combines functionality of ping and traceroute and gives a continuously updated display.
+dig	Tests DNS workings. A good replacement for host and nslookup.
+
+
+scp <localfile> <user@remotesystem>:/home/user/
