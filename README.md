@@ -1,9 +1,9 @@
 # Linux-Command-Line
 
-1. cat: used to type out a file (or combine files)
-2. head: used to show the first few lines of a file
-3. tail: used to show the last few lines of a file
-4. man: used to view documentation.
+* ```cat```: used to type out a file (or combine files)
+* ```head```: used to show the first few lines of a file
+* ```tail```: used to show the last few lines of a file
+* ```man```: used to view documentation.
 
 cat	Used for viewing files that are not very long; it does not provide any scroll-back.
 tac	Used to look at a file backwards, starting with the last line.
