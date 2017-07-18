@@ -132,3 +132,132 @@ For example, to find files greater than 10 MB in size and running a command on t
 
 $ find / -size +10M -exec command {} ’;’
 
+ apt-get install
+ apt-cache 
+ dpkg --install foo.deb
+ apt-get upgrade
+ 
+ man -f
+ man -k
+ 
+ man --help
+ 
+ kill -SIGKILL <pid> or kill -9 <pid>
+ 
+ info <topic name>
+ 
+  w
+  top
+  uptime
+  
+  jobs -l
+  
+  add & to run process in background
+ 
+ ps -ef
+ ps -eLf
+ 
+ ps aux
+ pstree
+ 
+ /etc/crontab 
+ crontab -e
+ 
+ sleep
+ 
+ $ tar xvf mydir.tar	Extract all the files in mydir.tar into the mydir directory
+$ tar zcvf mydir.tar.gz mydir	Create the archive and compress with gzip
+$ tar jcvf mydir.tar.bz2 mydir	Create the archive and compress with bz2
+$ tar Jcvf mydir.tar.xz mydir	Create the archive and compress with xz
+$ tar xvf mydir.tar.gz	Extract all the files in mydir.tar.gz into the mydir directory. Note you do not have to tell tar it is in gzip format.
+
+
+echo line one > myfile
+
+cat << EOF > myfile
+> line one
+> line two
+> line three
+> EOF
+
+## nano
+
+nano  is easy to use, and requires very little effort to learn. To open a file in nano, type nano <filename> and press Enter.  If the file does not exist, it will be created.
+
+nano provides a two line “shortcut bar” at the bottom of the screen that lists the available commands. Some of these commands are:
+
+CTRL-G: Display the help screen
+CTRL-O: Write to a file
+CTRL-X: Exit a file
+CTRL-R: Insert contents from another file to the current buffer
+CTRL-C: Cancels previous commands.
+
+## Modes in vi
+
+Mode	Feature
+Command	
+By default, vi starts in Command mode.
+Each key is an editor command.
+Keyboard strokes are interpreted as commands that can modify file contents.
+Insert	
+Type i to switch to Insert mode from Command mode.
+Insert mode is used to enter (insert) text into a file.
+Insert mode is indicated by an “? INSERT ?” indicator at the bottom of the screen.
+Press Esc to exit Insert mode and return to Command mode.
+Line	
+Type : to switch to the Line mode from Command mode. Each key is an external command, including operations such as writing the file contents to disk or exiting.
+Uses line editing commands inherited from older line editors. Most of these commands are actually no longer used. Some line editing commands are very powerful.
+Press Esc to exit Line mode and return to Command mode.
+
+vi myfile	Start the vi editor and edit the myfile file
+vi -r myfile	Start vi and edit myfile in recovery mode from a system crash
+:r file2	Read in file2 and insert at current position
+:w	Write to the file
+:w myfile	Write out the file to myfile
+:w! file2	Overwrite file2
+:x or :wq	Exit vi and write out modified file
+:q	Quit vi
+:q!	Quit vi even though modifications have not been saved
+
+arrow keys	To move up, down, left and right
+j or <ret>	To move one line down
+k	To move one line up
+h or Backspace	To move one character left
+l or Space	To move one character right
+0	To move to beginning of line
+$	To move to end of line
+w	To move to beginning of next word
+:0 or 1G	To move to beginning of file
+:n or nG	To move to line n
+:$ or G	To move to last line in file
+CTRL-F or Page Down	To move forward one page
+CTRL-B or Page Up	To move backward one page
+^l	To refresh and center screen
+
+/pattern	Search forward for pattern
+?pattern	Search backward for pattern
+
+n	Move to next occurrence of search pattern
+N	Move to previous occurrence of search pattern
+
+
+a	Append text after cursor; stop upon Escape key
+A	Append text at end of current line; stop upon Escape key
+i	Insert text before cursor; stop upon Escape key
+I	Insert text at beginning of current line; stop upon Escape key
+o	Start a new line below current line, insert text there; stop upon Escape key
+O	Start a new line above current line, insert text there; stop upon Escape key
+r	Replace character at current position
+R	Replace text starting with current position; stop upon Escape key
+x	Delete character at current position
+Nx	Delete N characters, starting at current position
+dw	Delete the word at the current position
+D	Delete the rest of the current line
+dd	Delete the current line
+Ndd or dNd	Delete N lines
+u	Undo the previous operation
+yy	Yank (copy) the current line and put it in buffer
+Nyy or yNy	Yank (copy) N lines and put it in buffer
+p	Paste at the current position the yanked line or lines from the buffer.
+
+
