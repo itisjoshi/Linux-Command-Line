@@ -19,41 +19,39 @@ rm –f	Forcefully remove a file
 rm –i	Interactively remove a file
 ```
 
-> sudo shutdown -h 10:00 "Shutting down for scheduled maintenance."
-
-> sudo shutdown -r 10:00 "Reboot for scheduled maintenance."
-
-> which diff
-
+```javascript
 pwd	Displays the present working directory
 cd ~ or cd	Change to your home directory (short-cut name is ~ (tilde))
 cd ..	Change to parent directory (..)
 cd -	Change to previous directory (- (minus))
+```
 
+```javascript
 cd /	Changes your current directory to the root (/) directory (or path you supply)
 ls	List the contents of the present working directory
 ls –a	List all files including hidden files and directories (those whose name start with . )
 tree	Displays a tree view of the filesystem
+```
 
-
-ls -li file1 file2
+> ls -li file1 file2
 
 Suppose that file1 already exists. A hard link, called file2, is created with the command:
 
-ln file1 file2
+> ln file1 file2
 
-$ ln -s file1 file3
-$ ls -li file1 file3
+> ln -s file1 file3
+> ls -li file1 file3
 
 Notice file3 no longer appears to be a regular file, and it clearly points to file1 and has a different inode number.
 
+```javascript
 pushd .
 popd 
-
+```
 to work with directories
 
 
-$ touch <filename>
+> touch <filename>
 
 This is normally done to create an empty file as a placeholder for a later purpose.
 
@@ -66,6 +64,12 @@ $ touch -t 03201600 myfile
 mv	Rename a directory
 rmdir	Remove an empty directory
 rm -rf	Forcefully remove a directory recursively
+
+> sudo shutdown -h 10:00 "Shutting down for scheduled maintenance."
+
+> sudo shutdown -r 10:00 "Reboot for scheduled maintenance."
+
+> which diff
 
 I/O Redirection
 
