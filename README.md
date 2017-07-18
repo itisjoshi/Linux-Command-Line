@@ -1,20 +1,28 @@
 # Linux-Command-Line
 
-* ```cat```: used to type out a file (or combine files)
-* ```head```: used to show the first few lines of a file
-* ```tail```: used to show the last few lines of a file
-* ```man```: used to view documentation.
+Must know Commands
 
+```javascript
+cat used to type out a file (or combine files)
+head used to show the first few lines of a file
+tail used to show the last few lines of a file
+man used to view documentation.
+```
+
+```javascript
 cat	Used for viewing files that are not very long; it does not provide any scroll-back.
 tac	Used to look at a file backwards, starting with the last line.
 less	Used to view larger files because it is a paging program; it pauses at each screen full of text, provides scroll-back capabilities, and lets you search and navigate within the file. Note: Use / to search for a pattern in the forward direction and ? for a pattern in the backward direction. (An older program named more is still used, but has fewer capabilities.)
 tail	Used to print the last 10 lines of a file by default. You can change the number of lines by doing -n 15 or just -15 if you wanted to look at the last 15 lines instead of the default.
 head	The opposite of tail; by default, it prints the first 10 lines of a file.
+```
+
+```javascript
 mv	Rename a file 
 rm	Remove a file 
 rm –f	Forcefully remove a file
 rm –i	Interactively remove a file
-
+```
 sudo shutdown -h 10:00 "Shutting down for scheduled maintenance."
 
 sudo shutdown -r 10:00 "Reboot for scheduled maintenance."
