@@ -48,8 +48,7 @@ Notice file3 no longer appears to be a regular file, and it clearly points to fi
 pushd .
 popd 
 ```
-to work with directories
-
+To work with directories parellely
 
 > touch <filename>
 
@@ -59,11 +58,14 @@ touch provides several options, but here is one of interest:
 
 The -t option allows you to set the date and time stamp of the file.
 To set the time stamp to a specific time:
-$ touch -t 03201600 myfile
 
+> touch -t 03201600 myfile
+
+```javascript
 mv	Rename a directory
 rmdir	Remove an empty directory
 rm -rf	Forcefully remove a directory recursively
+```
 
 > sudo shutdown -h 10:00 "Shutting down for scheduled maintenance."
 
